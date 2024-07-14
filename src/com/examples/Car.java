@@ -1,12 +1,11 @@
 package com.examples;
-public class Car {
-	private String brand;
-	public Car(String brand) {
-		this.brand = brand;
+public class Car extends Vehicle {
+	public void start() {
+		System.out.println("Car starts with ignition");
 	}
-	public String getBrand() {
-		return brand;
-		
+	public void stop() {
+		System.out.println("Car stops with break");
 	}
+
 
 }
