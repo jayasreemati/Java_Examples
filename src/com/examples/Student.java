@@ -1,5 +1,6 @@
 package com.examples;
 public class Student {
+	static String schoolName;
 	private String name;
 	private int age;
 	private String id;
@@ -35,6 +36,12 @@ public class Student {
     	System.out.println("major: " + major);
     }
 }
+	public static String getSchoolName() {
+		return schoolName;
+	}
+	public static void setSchoolName(String schoolName) {
+		Student.schoolName = schoolName;
+	}
 }
    
 

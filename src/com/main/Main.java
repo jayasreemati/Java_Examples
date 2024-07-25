@@ -2,8 +2,11 @@
 package com.main;
 
 //import com.examples.LargestNumberFinder;
-import com.examples.Vehicle;
-import com.examples.Car;
+//import com.examples.Vehicle;
+//import com.examples.StaticExample;
+//import com.examples.StudentExample;
+//import com.examples.Counter;
+//import com.examples.Car;
 
 
 //import com.examples.EvenOrOdd;
@@ -16,13 +19,21 @@ import com.examples.Car;
 //import com.examples.Car;
 //import com.examples.Cat;
 //import com.examples.Person;
-//import com.examples.Shape;
-//import com.examples.Rectangle;
-//import com.examples.Circle;
-import com.examples.Bike;
-
+import com.examples.Shape;
+import com.examples.Student;
+import com.examples.Rectangle;
+import com.examples.Circle;
+//import com.examples.Bike;
+import com.examples.PersonInfo;
+import com.examples.StudentExample;
+import com.example.Vehicle;
+import com.example.Car;
+import com.example.Bike;
+import com.example.Animal;
+import com.example.Dog;
 
 //import java.util.Scanner;
+
 
 public class Main {
 	public static void main(String args[]) {
@@ -126,14 +137,14 @@ public class Main {
 //		}
 //	
 //	    //Interface
-//	    Shape circle = new Circle(5.0);
-//        System.out.println("Circle Area: " + circle.calculateArea()) ;
-//        System.out.println("Circle Perimeter: " + circle.calculatePerimeter()) ;
-//
-//        // Create a Rectangle object
-//        Shape rectangle = new Rectangle(4.0, 6.0);
-//        System.out.println("Rectangle Area: " + rectangle.calculateArea());
-//        System.out.println("Rectangle Perimeter: " + rectangle.calculatePerimeter());
+	    Shape circle = new Circle(5.0);
+        System.out.println("Circle Area: " + circle.calculateArea()) ;
+        System.out.println("Circle Perimeter: " + circle.calculatePerimeter()) ;
+
+        // Create a Rectangle object
+        Shape rectangle = new Rectangle(4.0, 6.0);
+        System.out.println("Rectangle Area: " + rectangle.calculateArea());
+        System.out.println("Rectangle Perimeter: " + rectangle.calculatePerimeter());
 //	
         
         //Vehicle example
@@ -144,7 +155,53 @@ public class Main {
         bike.start();
         bike.stop();
         
+        //Encapsulation
+        PersonInfo person = new PersonInfo();
+        person.setName("Jaya");
+        person.setAge(22);
+        System.out.println("Name: "+person.getName());
+        System.out.println("Age: "+person.getAge());
+        
+//        //static keyword
+//        Counter c1 = new Counter();
+//        Counter c2 = new Counter();
+//        Counter c3 = new Counter();
+//        System.out.println("Number of instances created: " + c1.getCount());
+//        //static example
+//        StaticExample.staticMethod();
 		
+        //student example with static keyword
+        StudentExample student1 = new StudentExample();
+        student1.setName("kavya");
+        student1.setStudentID("1230");
+        student1.setEmail("Kavya@gmail.com");
+        student1.setPhoneNumber("999 999 9999");
+        student1.displayStudentInfo();
+        System.out.println();
+        StudentExample student2 = new StudentExample("Jaya","1234","jaya@gmail.com","123 456 7890");
+        student2.displayStudentInfo();
+        System.out.println();
+        StudentExample student3 = new StudentExample("John","1235","john@gmail.com","098 765 4321");
+        student3.displayStudentInfo();
+        
+        //Interface with vehicle example
+        Vehicle car1 = new Car();
+        Vehicle bike1 = new Bike();
+        car.start();
+        bike.start();
+        car.brake();
+        bike.brake();
+        car.stop();
+        bike.stop();
+        
+        //super keyword example
+        Dog myDog = new Dog();
+        myDog.setSpecies("canian");
+        myDog.setAge(5);
+        
+        myDog.displayInfo();
+        
+        
 
 
 		
